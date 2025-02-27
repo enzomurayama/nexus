@@ -53,7 +53,7 @@ const Filtros = () => {
 
         <button
           type="button"
-          className="text-white font-bold bg-[#1FA4E4] h-14 px-12 rounded hover:bg-blue-600"
+          className="text-white font-bold bg-[#1FA4E4] h-14 px-12 rounded hover:bg-blue-600 cursor-pointer"
         >
           <Link to="/criar-pedido">Criar pedido</Link>
         </button>

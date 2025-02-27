@@ -3,6 +3,7 @@ import PedidoCard from '../components/PedidoCard';
 import Filtros from '../components/Filtros';
 import axios from 'axios';
 import { useState } from 'react';
+import api from '../api';
 
 
 const MuralDePedidos = () => {
@@ -11,7 +12,7 @@ const MuralDePedidos = () => {
   useEffect(() => {
     const fetchPedidos = async () => {
       try {
-        const res = await axios.get("http://127.0.0.1:8000/pedidos");
+        const res = await api.get("/pedidos");
         setPedidos(res.data); // Definindo apenas os dados da resposta
       } catch (error) {
         console.error("Erro ao buscar pedidos:", error);

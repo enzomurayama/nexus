@@ -10,6 +10,7 @@ import MuralDePedidos from './pages/MuralDePedidos'
 import CriarPedido from './pages/CriarPedido'
 import Login from './pages/Login'
 import Register from './pages/Register'
+import ProtectedRoute from './components/ProtectedRoute'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -23,7 +24,10 @@ function App() {
                 <Route path="/" element={<Home />} />
                 <Route path="/sobre" element={<Sobre />} />
                 <Route path="/mural" element={<MuralDePedidos />} />
-                <Route path="/criar-pedido" element={<CriarPedido />} />
+                <Route element={<ProtectedRoute />}>
+                  <Route path="/criar-pedido" element={<CriarPedido />} />
+                  {/* Outras rotas protegidas aqui */}
+                </Route>
                 <Route path="/login" element={<Login />} />
                 <Route path="/register" element={<Register />} />
               </Routes>

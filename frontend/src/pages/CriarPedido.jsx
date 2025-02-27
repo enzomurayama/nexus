@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import axios from 'axios'; // Para fazer requisições HTTP
+import api from '../api';
 
 const CriarPedido = () => {
   // Estado para armazenar os dados do formulário
@@ -24,10 +25,12 @@ const CriarPedido = () => {
   // Função para enviar os dados do formulário para a API
   const handleSubmit = async (e) => {
     e.preventDefault(); // Evita o comportamento padrão do formulário
+    const token = localStorage.getItem('token'); //pega o token de autenticação
 
     try {
+
       // Faz a requisição POST para a API
-      const response = await axios.post('http://localhost:8000/pedidos', formData);
+      const response = await api.post('/pedidos', formData, {});
       console.log('Pedido criado com sucesso:', response.data);
 
       // Limpa o formulário após o envio
