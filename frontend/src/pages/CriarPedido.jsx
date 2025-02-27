@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import axios from 'axios'; // Para fazer requisições HTTP
 import api from '../api';
+import { toast, ToastContainer } from 'react-toastify';
+import { useNavigate } from 'react-router-dom';
 
 const CriarPedido = () => {
   // Estado para armazenar os dados do formulário
@@ -12,6 +14,8 @@ const CriarPedido = () => {
     imagem: '',
     icone: '',
   });
+
+  const navigate = useNavigate()
 
   // Função para atualizar o estado quando os campos do formulário mudam
   const handleChange = (e) => {
@@ -43,10 +47,27 @@ const CriarPedido = () => {
         icone: '',
       });
 
-      alert('Pedido criado com sucesso!');
+// Show success toast
+      toast.success('Cadastrado com sucesso!', {
+        position: "top-right",
+        autoClose: 2000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+      });
+    
     } catch (error) {
       console.error('Erro ao criar pedido:', error);
-      alert('Erro ao criar pedido. Verifique os dados e tente novamente.');
+        toast.error('Erro ao criar pedido!', {
+        position: "top-right",
+        autoClose: 2000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+      });
+    
     }
   };
 
@@ -135,7 +156,10 @@ const CriarPedido = () => {
           </button>
         </div>
       </form>
+
+      <ToastContainer />
     </div>
+
   );
 };
 

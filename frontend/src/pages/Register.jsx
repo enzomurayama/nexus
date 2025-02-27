@@ -1,7 +1,26 @@
 import React, { useState } from 'react';
 import axios from 'axios';
+import { z } from 'zod';
+import { useNavigate } from 'react-router-dom';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
+// Validation schema remains the same
+const registerSchema = z.object({
+  login: z.string().min(3, { message: "Login deve ter pelo menos 3 caracteres" }),
+  email: z.string().email({ message: "Email inválido" }),
+  password: z.string().min(6, { message: "Senha deve ter pelo menos 6 caracteres" }),
+  confirmarSenha: z.string(),
+  telefone: z.string().min(10, { message: "Telefone deve ter pelo menos 10 dígitos" }),
+  endereco: z.string().min(5, { message: "Endereço deve ter pelo menos 5 caracteres" }),
+  tipo_conta: z.enum(['usuario_comum', 'voluntario'])
+}).refine(data => data.password === data.confirmarSenha, {
+  message: "As senhas não coincidem",
+  path: ["confirmarSenha"]
+});
 
 const Register = () => {
+  const navigate = useNavigate();
   const [currentTab, setCurrentTab] = useState(1);
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [formData, setFormData] = useState({
@@ -24,11 +43,9 @@ const Register = () => {
   };
 
   const openModal = async () => {
-    if (formData.password !== formData.confirmarSenha) {
-      setError('As senhas não coincidem');
-      return;
-    }
     try {
+      // Validate data before sending
+      registerSchema.parse(formData);
       await axios.post('http://localhost:8000/register', {
         login: formData.login,
         email: formData.email,
@@ -37,10 +54,25 @@ const Register = () => {
         endereco: formData.endereco,
         tipo_conta: formData.tipo_conta,
       });
-      setIsModalOpen(true);
+      
+      // Show success toast
+      toast.success('Cadastrado com sucesso!', {
+        position: "top-right",
+        autoClose: 2000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        onClose: () => navigate("/login") // Redirect after toast closes
+      });
+      
       setError('');
     } catch (err) {
-      setError('Erro ao cadastrar. Login ou email já existem.');
+      if (err instanceof z.ZodError) {
+        setError(err.errors[0].message);
+      } else {
+        setError('Erro ao cadastrar. Login ou email já existem.');
+      }
     }
   };
 
@@ -65,11 +97,13 @@ const Register = () => {
           ))}
         </div>
 
+        {error && <p className="text-red-500 mb-4">{error}</p>}
+
+        {/* Tab content remains the same */}
         {/* Tab 1 */}
         <div className={`tab-content w-full max-w-md p-8 bg-white shadow-lg rounded ${currentTab !== 1 && 'hidden'}`}>
           <h2 className="text-3xl font-bold text-[#1E1E1E] mb-4">Crie uma nova conta</h2>
           <p className="text-lg text-[#525560] mb-6">Faça parte dessa comunidade</p>
-          {error && <p className="text-red-500 mb-4">{error}</p>}
           <form>
             <div className="mb-4">
               <label htmlFor="login" className="block text-gray-700 font-medium mb-2">Login</label>
@@ -219,6 +253,8 @@ const Register = () => {
           </div>
         )}
       </div>
+      {/* Add ToastContainer at the end */}
+      <ToastContainer />
     </div>
   );
 };
