@@ -8,6 +8,8 @@ import { Route, Routes } from 'react-router-dom'
 import Sobre from './pages/Sobre'
 import MuralDePedidos from './pages/MuralDePedidos'
 import CriarPedido from './pages/CriarPedido'
+import Login from './pages/Login'
+import Register from './pages/Register'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -22,6 +24,8 @@ function App() {
                 <Route path="/sobre" element={<Sobre />} />
                 <Route path="/mural" element={<MuralDePedidos />} />
                 <Route path="/criar-pedido" element={<CriarPedido />} />
+                <Route path="/login" element={<Login />} />
+                <Route path="/register" element={<Register />} />
               </Routes>
             </main>
             <Footer />

@@ -49,10 +49,10 @@ export default function Header() {
 
         <div className="flex space-x-4 my-auto lg:block hidden">
           <button className="bg-white text-[#1FA4E4] font-bold py-2 px-7 rounded border border-[#1FA4E4] hover:bg-blue-50">
-            <a href="pages/cadastro.html">Criar conta</a>
+            <a href="/register">Criar conta</a>
           </button>
           <button className="bg-[#1FA4E4] text-white font-bold py-2 px-7 rounded hover:bg-[#006BB1]">
-            <a href="pages/login.html">Entrar</a>
+            <a href="/login">Entrar</a>
           </button>
         </div>
       </nav>
@@ -96,10 +96,10 @@ export default function Header() {
           <div className="flex flex-col space-y-5">
             <div className="flex space-x-4 mb-2 my-auto lg:block">
               <button className="bg-white text-[#1FA4E4] font-semibold py-2 px-3 rounded border border-[#1FA4E4] hover:bg-blue-50">
-                <a href="/src/pages/cadastro.html">Criar conta</a>
+                <a href="/register">Criar conta</a>
               </button>
               <button className="bg-[#1FA4E4] text-white font-semibold py-2 px-3 rounded hover:bg-[#006BB1]">
-                <a href="/src/pages/login.html">Entrar</a>
+                <a href="/login">Entrar</a>
               </button>
             </div>
 
