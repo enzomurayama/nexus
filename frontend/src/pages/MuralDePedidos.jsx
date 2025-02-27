@@ -1,32 +1,25 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import PedidoCard from '../components/PedidoCard';
 import Filtros from '../components/Filtros';
+import axios from 'axios';
+import { useState } from 'react';
+
 
 const MuralDePedidos = () => {
-  const pedidos = [
-    {
-      imagem: '/mural-1.png',
-      titulo: 'Estamos sem água',
-      local: 'Karachi, Sindh, Pakistan',
-      pessoas: 27,
-      icone: '/sobre-water-icon.png',
-    },
-    {
-      imagem: '/mural-2.png',
-      titulo: 'Sem abrigo',
-      local: '1450 1ST AVE NEW YORK NY',
-      pessoas: 9,
-      icone: '/mural-house-icon.png',
-    },
-    {
-      imagem: '/mural-3.png',
-      titulo: 'Falta de alimentos',
-      local: 'Rua Salomão, 316 - São Paulo, SP - Brasil',
-      pessoas: 12,
-      icone: '/mural-fork-icon.png',
-    },
-    // Adicione mais pedidos conforme necessário
-  ];
+  const [pedidos, setPedidos] = useState([]);
+
+  useEffect(() => {
+    const fetchPedidos = async () => {
+      try {
+        const res = await axios.get("http://127.0.0.1:8000/pedidos");
+        setPedidos(res.data); // Definindo apenas os dados da resposta
+      } catch (error) {
+        console.error("Erro ao buscar pedidos:", error);
+      }
+    };
+
+    fetchPedidos();
+  }, []);
 
   return (
     <div>

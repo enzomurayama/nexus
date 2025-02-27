@@ -18,7 +18,7 @@ const PedidoCard = ({ imagem, titulo, local, pessoas, icone }) => {
           <p className="text-sm text-gray-600">{pessoas} pessoas</p>
         </div>
         <div className="rounded-lg flex mb-12 z-10">
-          <img src={icone} alt="Ícone" />
+          <img src={icone} className='w-[100px]' alt="Ícone" />
         </div>
       </div>
     </div>
