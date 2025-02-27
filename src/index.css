@@ -8,3 +8,11 @@
 
     --font-inter: Inter, sans-serif;
 }
+
+.swiper-wrapper{
+    align-items: center;
+}
+
+.swiper-slide{
+    height: auto !important;
+}
