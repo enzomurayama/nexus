@@ -36,10 +36,10 @@ export default function Header() {
           <a href="/" className="text-[#1E1E1E] hover:text-[#1FA4E4]">
             Home
           </a>
-          <a href="pages/sobre.html" className="text-[#1E1E1E] hover:text-[#1FA4E4]">
+          <a href="/sobre" className="text-[#1E1E1E] hover:text-[#1FA4E4]">
             Sobre
           </a>
-          <a href="pages/mural.html" className="text-[#1E1E1E] hover:text-[#1FA4E4]">
+          <a href="/mural" className="text-[#1E1E1E] hover:text-[#1FA4E4]">
             Mural de pedidos
           </a>
           <a href="#" className="text-[#1E1E1E] hover:text-[#1FA4E4]">
@@ -106,10 +106,10 @@ export default function Header() {
             <a href="index.html" className="text-[#1E1E1E] hover:text-[#1FA4E4]">
               Home
             </a>
-            <a href="pages/sobre.html" className="text-[#1E1E1E] hover:text-[#1FA4E4]">
+            <a href="/sobre" className="text-[#1E1E1E] hover:text-[#1FA4E4]">
               Sobre
             </a>
-            <a href="pages/mural.html" className="text-[#1E1E1E] hover:text-[#1FA4E4]">
+            <a href="/mural" className="text-[#1E1E1E] hover:text-[#1FA4E4]">
               Mural de pedidos
             </a>
             <a href="#mapa" className="text-[#1E1E1E] hover:text-[#1FA4E4]">
