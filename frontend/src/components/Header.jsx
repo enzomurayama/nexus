@@ -1,12 +1,12 @@
-import React, { useState } from 'react';
-import { useNavigate } from 'react-router-dom'; // Para redirecionamento após logout
+import React, { useState } from "react";
+import { useNavigate } from "react-router-dom"; // Para redirecionamento após logout
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const navigate = useNavigate();
 
   // Verifica se o usuário está logado
-  const isLoggedIn = !!localStorage.getItem('token');
+  const isLoggedIn = !!localStorage.getItem("token");
 
   // Função para abrir/fechar o menu
   const toggleMenu = () => {
@@ -15,13 +15,13 @@ export default function Header() {
 
   // Função para logout
   const handleLogout = () => {
-    localStorage.removeItem('token'); // Remove o token
-    navigate('/login'); // Redireciona para a página de login
+    localStorage.removeItem("token"); // Remove o token
+    navigate("/login"); // Redireciona para a página de login
   };
 
   return (
     <>
-      <nav className="flex items-center justify-between flex-wrap bg-white p-6 px-20">
+      <nav className="flex items-center justify-between flex-wrap bg-white p-6 px-12 lg:px-20">
         <div className="flex items-center lg:w-auto w-1/2 flex-shrink-0 text-white mr-6">
           <img className="h-5" src="/Nexus.svg" alt="Nexus Logo" />
         </div>
@@ -62,33 +62,29 @@ export default function Header() {
           {isLoggedIn ? (
             <button
               onClick={handleLogout}
-              className="bg-[#1FA4E4] text-white font-bold py-2 px-7 rounded hover:bg-[#006BB1] cursor-pointer"
+              className="bg-white text-[#1FA4E4] font-bold py-2 px-10 rounded border border-[#1FA4E4] hover:bg-blue-50 cursor-pointer"
             >
               Sair
             </button>
           ) : (
-            <>
-              <button className="bg-white text-[#1FA4E4] font-bold py-2 px-7 rounded border border-[#1FA4E4] hover:bg-blue-50 cursor-pointer">
-                <a href="/register">Criar conta</a>
-              </button>
-              <button className="bg-[#1FA4E4] text-white font-bold py-2 px-7 rounded hover:bg-[#006BB1]cursor-pointer">
-                <a href="/login">Entrar</a>
-              </button>
-            </>
+            <div className="flex gap-3">
+              <a href="/register" className="bg-white text-[#1FA4E4] font-bold py-2 px-7 rounded border border-[#1FA4E4] hover:bg-blue-50 cursor-pointer">Criar conta</a>
+              <a href="/login" className="bg-[#1FA4E4] text-white font-bold py-2 px-7 rounded hover:bg-[#006BB1]cursor-pointer">Entrar</a>
+            </div>
           )}
         </div>
       </nav>
 
       <div
         id="menu-modal"
-        className={`fixed inset-0 flex justify-start bg-black/50 z-50 ${
-          isMenuOpen ? 'block' : 'hidden'
+        className={`fixed inset-0 flex justify-end bg-black/50 z-50 ${
+          isMenuOpen ? "block" : "hidden"
         }`}
       >
         <div
           id="modal-content"
           className={`bg-white w-64 h-full p-6 shadow-lg transform transition-transform duration-300 ${
-            isMenuOpen ? 'translate-x-0' : '-translate-x-full'
+            isMenuOpen ? "translate-x-0" : "translate-x-full"
           }`}
         >
           <div className="flex justify-between items-center mb-6">
@@ -119,18 +115,14 @@ export default function Header() {
             {isLoggedIn ? (
               <button
                 onClick={handleLogout}
-                className="bg-[#1FA4E4] text-white font-semibold py-2 px-3 rounded hover:bg-[#006BB1]"
+                className="bg-white text-[#1FA4E4] font-bold py-2 rounded border border-[#1FA4E4] hover:bg-blue-50 cursor-pointer"
               >
                 Sair
               </button>
             ) : (
-              <div className="flex space-x-4 mb-2 my-auto">
-                <button className="bg-white text-[#1FA4E4] font-semibold py-2 px-3 rounded border border-[#1FA4E4] hover:bg-blue-50 cursor-pointer">
-                  <a href="/register">Criar conta</a>
-                </button>
-                <button className="bg-[#1FA4E4] text-white font-semibold py-2 px-3 rounded hover:bg-[#006BB1] cursor-pointer">
-                  <a href="/login">Entrar</a>
-                </button>
+              <div className="flex space-x-4 mb-6 my-auto">
+                <a href="/register" className="bg-white text-[#1FA4E4] font-semibold py-2 px-3 rounded border border-[#1FA4E4] hover:bg-blue-50 cursor-pointer">Criar conta</a>
+                <a href="/login" className="bg-[#1FA4E4] text-white font-semibold py-2 px-3 rounded hover:bg-[#006BB1] cursor-pointer">Entrar</a>
               </div>
             )}
 
