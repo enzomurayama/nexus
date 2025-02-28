@@ -21,7 +21,7 @@ export default function Home() {
             </h2>
 
             <a
-              href="pages/mural.html"
+              href="/mural"
               className="bg-white text-[#1E1E1E] font-semibold py-4 px-10 rounded hover:bg-[#D9D9D9] transition duration-300"
             >
               Quero ajudar
@@ -64,15 +64,14 @@ export default function Home() {
             ajudar.
           </p>
 
-          <p className="text-[#525560] text-lg" style={{"line-height": '1.8'}}
+          <p className="text-[#525560] text-lg mb-12" style={{"line-height": '1.8'}}
           >
             Nossa missão é construir pontes de solidariedade, facilitando a
             comunicação entre vítimas e voluntários.
           </p>
 
-          <button className="bg-[#1FA4E4] text-white font-semibold mt-10 py-3 px-8 rounded hover:bg-[#006BB1]">
-            <a href="pages/sobre.html">Saiba mais</a>
-          </button>
+          <a href="/sobre" className="bg-[#1FA4E4] text-white font-semibold py-4 px-10 rounded hover:bg-[#006BB1]">Saiba mais</a>
+
         </div>
 
         <div style={{"width": '450px', 'height': '600px'}} className="lg:block hidden">
@@ -203,7 +202,7 @@ export default function Home() {
           <h2 className="text-4xl font-bold mb-4 mt-10">SEJA NOSSO PARCEIRO</h2>
 
           <p
-            className="text-lg text-[#525560] md:text-start text-justify mt-8 mb-4"
+            className="text-lg text-[#525560] md:text-start text-justify mt-8 mb-12"
             style={{"line-height": '1.8'}}
           >
             Junte-se a nós e faça a diferença na vida de milhares de pessoas. O
@@ -214,9 +213,8 @@ export default function Home() {
             próximo de você.
           </p>
 
-          <button className="bg-[#1FA4E4] text-white font-bold mt-10 py-3 px-8 rounded hover:bg-[#006BB1]">
-            <a href="/src/pages/cadastro.html">Ser voluntário</a>
-          </button>
+          <a className="bg-[#1FA4E4] text-white font-bold py-4 px-8 rounded hover:bg-[#006BB1]" href="/register">Ser voluntário</a>
+
         </div>
 
         <div style={{"width": '450px', 'height': '600px'}} className="lg:block hidden">
