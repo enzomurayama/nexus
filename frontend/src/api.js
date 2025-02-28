@@ -23,6 +23,11 @@ api.interceptors.request.use(
 api.interceptors.response.use(
   (response) => response,
   (error) => {
+    // Se o erro for de /pedidos e for 401, apenas loga o erro sem redirecionar
+    if (error.config.url === '/pedidos' && error.response?.status === 401) {
+      console.error("Falha ao buscar pedidos, mas continuando na página");
+      return Promise.reject(error);
+    }
     if (error.response?.status === 401) {
       // Token inválido ou expirado, redireciona para login
       localStorage.removeItem('token');

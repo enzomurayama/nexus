@@ -1,7 +1,6 @@
-import React from 'react';
+import React from "react";
 
-import { Link } from 'react-router-dom';
-
+import { Link } from "react-router-dom";
 
 const Filtros = () => {
   return (
@@ -34,7 +33,7 @@ const Filtros = () => {
           type="button"
           className="bg-white flex items-center gap-6 text-black font-bold h-14 px-12 active:border-[#1FA4E4] active:text-[#1FA4E4] rounded border border-[#D2D2D2] hover:bg-blue-50 hover:border-[#1FA4E4]"
         >
-          Filtros{' '}
+          Filtros{" "}
           <span>
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -50,13 +49,14 @@ const Filtros = () => {
             </svg>
           </span>
         </button>
-
-        <button
-          type="button"
-          className="text-white font-bold bg-[#1FA4E4] h-14 px-12 rounded hover:bg-blue-600 cursor-pointer"
-        >
-          <Link to="/criar-pedido">Criar pedido</Link>
-        </button>
+        <Link to="/criar-pedido">
+          <button
+            type="button"
+            className="text-white font-bold bg-[#1FA4E4] h-14 px-12 rounded hover:bg-blue-600 cursor-pointer"
+          >
+            Criar pedido
+          </button>
+        </Link>
       </div>
     </div>
   );

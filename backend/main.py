@@ -121,7 +121,7 @@ def register(user: UserCreate):
 
 # Endpoints existentes
 @app.get("/pedidos", response_model=List[Pedido])
-def listar_pedidos(current_user: User = Depends(get_current_user)):
+def listar_pedidos():
     return pedidos_db
 
 @app.post("/pedidos", response_model=Pedido)

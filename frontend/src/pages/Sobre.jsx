@@ -36,7 +36,7 @@ export default function Sobre() {
         style={{ backgroundImage: "url('/sobre-img.png')" }}
       >
         <div className="absolute inset-0 bg-black opacity-40"></div>
-        <div className="relative z-10 flex flex-col justify-between w-full h-full lg:text-start text-center text-white">
+        <div className="relative z-10 flex flex-col justify-between w-full h-full px-16 lg:text-start text-center text-white">
           <Swiper
             modules={[Pagination, Navigation]}
             pagination={{ clickable: true }}
