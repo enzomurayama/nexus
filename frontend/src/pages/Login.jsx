@@ -17,7 +17,7 @@ const Login = () => {
       });
       localStorage.setItem('token', response.data.access_token);
       // Redirecionar ou atualizar estado após login bem-sucedido
-      window.location.href = '/dashboard'; // Exemplo
+      window.location.href = '/'; 
     } catch (err) {
       setError('Login ou senha incorretos');
     }
