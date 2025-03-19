@@ -3,10 +3,12 @@
 
 @theme{
     --color-primary: #1FA4E4;
-    --color-secondary: #F3FBFF; 
+    --color-secondary: #F3FBFF;
     --color-text: #525560;
 
     --font-inter: Inter, sans-serif;
+
+    --breakpoint-xs: 25rem;
 }
 
 .swiper-wrapper{
