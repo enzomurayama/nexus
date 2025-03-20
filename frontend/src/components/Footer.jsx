@@ -3,8 +3,8 @@ import { faFacebookF, faXTwitter, faInstagram } from '@fortawesome/free-brands-s
 
 export default function Footer() {
   return (
-    <footer className="bg-black text-white py-14 w-full">
-      <div className="w-full px-10 text-[#D4D4D4] sm:px-20">
+    <footer className="bg-black text-white py-14 w-full px-10 lg:px-20">
+      <div className="w-full text-[#D4D4D4]">
         <div className="grid lg:grid-cols-[25%_40%_35%] md:grid-cols-[35%_65%]">
           <div className="text-center text-left">
             <h1 className="text-3xl text-white font-bold mb-4">Nexus</h1>
@@ -44,7 +44,7 @@ export default function Footer() {
         </div>
       </div>
 
-      <div className="w-full mt-8 px-10 text-center sm:px-20">
+      <div className="w-full mt-8 text-center">
         <div className="border-t-2 border-[#D4D4D4] w-full"></div>
 
         <div className="flex flex-col justify-between items-center mt-6 sm:flex-row">

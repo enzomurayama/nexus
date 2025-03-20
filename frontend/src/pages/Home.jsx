@@ -40,7 +40,7 @@ export default function Home() {
 
       <section
         id="about"
-        className="flex flex-col lg:flex-row items-center justify-between px-20 py-12 bg-gray-100"
+        className="flex flex-col lg:flex-row items-center justify-between px-20 py-12 bg-white"
       >
         <div className="lg:w-1/2">
           <div className="flex items-center mt-10 lg:mt-0">
@@ -85,7 +85,7 @@ export default function Home() {
 
       <section
         id="tutorial"
-        className="flex flex-col lg:flex-row items-center justify-between px-20 py-12 bg-gray-100"
+        className="flex flex-col lg:flex-row items-center justify-between px-20 py-12 bg-white"
       >
         <div className="flex flex-col w-full">
           <div className="flex items-center">
@@ -189,7 +189,7 @@ export default function Home() {
 
       <section
         id="partner"
-        className="flex flex-col lg:flex-row items-center justify-between px-20 py-12 bg-gray-100"
+        className="flex flex-col lg:flex-row items-center justify-between px-20 py-12 bg-white"
       >
         <div className="lg:w-1/2 w-full mb-12">
           <div className="flex lg:flex-row items-center">
