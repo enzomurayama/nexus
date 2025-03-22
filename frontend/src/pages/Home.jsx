@@ -39,14 +39,14 @@ export default function Home() {
             QUEREMOS SER A SUA ESPERANÇA
           </h2>
 
-          <p className="font-inter text-lg/[1.8] text-[#525560] text-justify my-8">
+          <p className="font-inter text-lg/[1.8] text-textc text-justify my-8">
             Em um mundo onde desastres naturais podem abalar nossas vidas, o
             Nexus surge como um farol de esperança. Somos uma plataforma criada
             para conectar aqueles que precisam de ajuda com aqueles que querem
             ajudar.
           </p>
 
-          <p className="font-inter text-lg/[1.8] text-[#525560] text-justify mb-16">
+          <p className="font-inter text-lg/[1.8] text-textc text-justify mb-16">
             Nossa missão é construir pontes de solidariedade, facilitando a
             comunicação entre vítimas e voluntários.
           </p>
@@ -75,7 +75,7 @@ export default function Home() {
 
           <h2 className="font-inter text-4xl/[1.4] font-bold mt-8">PRECISO DE APOIO</h2>
 
-          <p className="text-lg/[1.8] text-[#525560] text-justify my-8 lg:w-[55%]">
+          <p className="text-lg/[1.8] text-textc text-justify my-8 lg:w-[55%]">
             Se você é vítima de um desastre natural e precisa de ajuda, nós
             podemos te ajudar. Neste caso, basta criar um post especificando
             suas condições e necessidades.
@@ -88,7 +88,7 @@ export default function Home() {
 
               <h4 className="font-inter text-xl font-bold my-6">Crie sua conta</h4>
 
-              <p className="font-inter text-center text-md text-[#525560]">
+              <p className="font-inter text-center text-md text-textc">
                 Registre-se para conseguir criar novas publicações e solicitar ajuda para voluntários.
               </p>
             </div>
@@ -99,7 +99,7 @@ export default function Home() {
 
               <h4 className="font-inter text-xl text-center font-bold my-6">Publique seu pedido</h4>
 
-              <p className="font-inter text-center text-md text-[#525560]">
+              <p className="font-inter text-center text-md text-textc">
                 Deixe os voluntários sabendo que você está precisando de ajuda.
               </p>
             </div>
@@ -110,7 +110,7 @@ export default function Home() {
 
               <h4 className="font-inter text-xl font-bold my-6">Receba ajuda</h4>
 
-              <p className="font-inter text-center text-md text-[#525560]">
+              <p className="font-inter text-center text-md text-textc">
                 Assim que um voluntário estiver pronto para ajudar, você será notificado.
               </p>
             </div>
@@ -132,7 +132,7 @@ export default function Home() {
             SEJA NOSSO PARCEIRO
           </h2>
 
-          <p className="font-inter text-lg/[1.8] text-[#525560] text-justify mt-8 mb-16">
+          <p className="font-inter text-lg/[1.8] text-textc text-justify mt-8 mb-16">
             Junte-se a nós e faça a diferença na vida de milhares de pessoas. O
             Nexus te convida a ser parte de uma rede global de solidariedade.
             Seja voluntário e ajude a reconstruir comunidades afetadas por

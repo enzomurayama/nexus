@@ -50,10 +50,10 @@ export default function Header() {
         </div>
 
         <div className="hidden lg:flex lg:items-center lg:space-x-12">
-          <a href="/" className="font-inter font-medium text-[#333] hover:text-primary">Início</a>
-          <a href="/sobre" className="font-inter font-medium text-[#333] hover:text-primary">Sobre</a>
-          <a href="/mural" className="font-inter font-medium text-[#333] hover:text-primary">Mural de pedidos</a>
-          <a href="#" className="font-inter font-medium text-[#333] hover:text-primary">Mapa</a>
+          <a href="/" className="font-inter font-medium text-textc hover:text-primary">Início</a>
+          <a href="/sobre" className="font-inter font-medium text-textc hover:text-primary">Sobre</a>
+          <a href="/mural" className="font-inter font-medium text-textc hover:text-primary">Mural de pedidos</a>
+          <a href="#" className="font-inter font-medium text-textc hover:text-primary">Mapa</a>
         </div>
 
         <div className="flex space-x-4 my-auto lg:block hidden">
@@ -79,14 +79,14 @@ export default function Header() {
           className={`bg-white w-full h-62 px-10 pb-8 ${isMenuOpen ? "translate-x-0" : "translate-x-full"}`}
         >
           <div className="flex flex-col space-y-6">
-            <a href="/" className="font-inter font-medium text-[#333] hover:text-primary">Início</a>
-            <a href="/sobre" className="font-inter font-medium text-[#333] hover:text-primary">Sobre</a>
-            <a href="/mural" className="font-inter font-medium text-[#333] hover:text-primary">Mural de pedidos</a>
-            <a href="#mapa" className="font-inter font-medium text-[#333] hover:text-primary">Mapa</a>
+            <a href="/" className="font-inter font-medium text-textc hover:text-primary">Início</a>
+            <a href="/sobre" className="font-inter font-medium text-textc hover:text-primary">Sobre</a>
+            <a href="/mural" className="font-inter font-medium text-textc hover:text-primary">Mural de pedidos</a>
+            <a href="#mapa" className="font-inter font-medium text-textc hover:text-primary">Mapa</a>
             {isLoggedIn ? (
               <a onClick={handleLogout} href="/login" className="font-inter text-primary font-medium hover:text-[#0371a6]">Sair</a>
             ) : (
-              <a href="/login" className="font-inter text-[#333] font-bold hover:text-primary">Entrar</a>
+              <a href="/login" className="font-inter text-textc font-bold hover:text-primary">Entrar</a>
             )}
           </div>
         </div>
