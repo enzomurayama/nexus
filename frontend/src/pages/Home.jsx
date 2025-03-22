@@ -6,7 +6,7 @@ import Header from "../components/Header";
 export default function Home() {
   return (
     <div>
-      <section className="relative w-full h-[20rem] mb-14 bg-[url('/header-bg.png')] bg-center bg-cover md:h-[25rem] lg:h-[40rem]">
+      <section className="relative w-full h-[20rem] mb-8 bg-[url('/header-bg.png')] bg-center bg-cover lg:mb-16 md:h-[25rem] lg:h-[40rem]">
         <div className="flex flex-col justify-between w-full h-full px-10 lg:px-20">
           <div className="my-auto space-y-16">
             <h2 className="font-inter text-white font-bold text-3xl/[1.3] sm:text-4xl/[1.3] md:text-5xl/[1.3] lg:text-7xl/[1.3]">
@@ -25,7 +25,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="flex flex-col lg:flex-row items-center justify-between px-10 py-14 lg:px-20">
+      <section className="flex flex-col lg:flex-row items-center justify-between px-10 py-12 sm:py-16 lg:px-20">
         <div className="lg:w-[55%]">
           <div className="flex items-center">
             <h3 className="font-inter text-md tracking-wider text-nowrap text-[#1FA4E4]">
@@ -63,7 +63,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="flex flex-col lg:flex-row items-center justify-between px-10 py-14 lg:px-20">
+      <section className="flex flex-col lg:flex-row items-center justify-between px-10 py-12 sm:py-16 lg:px-20">
         <div className="flex flex-col w-full">
           <div className="flex items-center">
             <h3 className="font-inter text-md tracking-wider text-nowrap text-[#1FA4E4]">
@@ -82,19 +82,19 @@ export default function Home() {
           </p>
 
           <div className="flex flex-col mt-8 gap-x-8 gap-y-6 xl:gap-x-16 lg:flex-row">
-            <div className="w-full h-[260px] flex flex-col bg-blue-50 justify-center items-center p-12 rounded-lg border border-primary 
-                            transition duration-300 transform hover:scale-102 hover:shadow-md lg:w-1/3 lg:h-[360px]">
+            <div className="w-full h-[260px] flex flex-col bg-blue-50 justify-center items-center p-8 rounded-lg border border-primary 
+                            transition duration-300 transform hover:scale-102 hover:shadow-md lg:w-1/3 lg:h-[320px]">
               <FontAwesomeIcon icon={faUser} className="text-[#1FA4E4] text-5xl"/>
 
               <h4 className="font-inter text-xl font-bold my-6">Crie sua conta</h4>
 
               <p className="font-inter text-center text-md text-textc">
-                Registre-se para conseguir criar novas publicações e solicitar ajuda para voluntários.
+                Registre-se para conseguir criar novas publicações e solicitar ajuda.
               </p>
             </div>
 
-            <div className="w-full h-[260px] flex flex-col bg-blue-50 justify-center items-center p-12 rounded-lg border border-primary 
-                            transition duration-300 transform hover:scale-102 hover:shadow-md lg:w-1/3 lg:h-[360px]">
+            <div className="w-full h-[260px] flex flex-col bg-blue-50 justify-center items-center p-8 rounded-lg border border-primary 
+                            transition duration-300 transform hover:scale-102 hover:shadow-md lg:w-1/3 lg:h-[320px]">
               <FontAwesomeIcon icon={faPaperPlane} className="text-[#1FA4E4] text-5xl"/>
 
               <h4 className="font-inter text-xl text-center font-bold my-6">Publique seu pedido</h4>
@@ -104,8 +104,8 @@ export default function Home() {
               </p>
             </div>
 
-            <div className="w-full h-[260px] flex flex-col bg-blue-50 justify-center items-center p-12 rounded-lg border border-primary 
-                            transition duration-300 transform hover:scale-102 hover:shadow-md lg:w-1/3 lg:h-[360px]">
+            <div className="w-full h-[260px] flex flex-col bg-blue-50 justify-center items-center p-8 rounded-lg border border-primary 
+                            transition duration-300 transform hover:scale-102 hover:shadow-md lg:w-1/3 lg:h-[320px]">
               <FontAwesomeIcon icon={faHandsHelping} className="text-[#1FA4E4] text-5xl"/>
 
               <h4 className="font-inter text-xl font-bold my-6">Receba ajuda</h4>
@@ -118,7 +118,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="flex flex-col lg:flex-row items-center justify-between mb-16 px-10 py-14 lg:px-20">
+      <section className="flex flex-col lg:flex-row items-center justify-between mb-24 px-10 py-12 sm:py-16 lg:px-20">
         <div className="lg:w-[55%]">
           <div className="flex items-center">
             <h3 className="font-inter text-md tracking-wider text-nowrap text-[#1FA4E4]">
