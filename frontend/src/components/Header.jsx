@@ -58,11 +58,11 @@ export default function Header() {
 
         <div className="flex space-x-4 my-auto lg:block hidden">
           {isLoggedIn ? (
-            <a onClick={handleLogout} href="/login" className="bg-primary text-white font-bold py-2 px-7 rounded hover:bg-[#006BB1]cursor-pointer">Sair</a>
+            <a onClick={handleLogout} href="/login" className="bg-primary text-white font-bold py-2 px-7 rounded hover:bg-[#006BB1]">Sair</a>
           ) : (
             <div className="flex gap-3">
-              <a href="/register" className="bg-white text-primary font-bold py-2 px-7 rounded border border-primary hover:bg-blue-50 cursor-pointer">Criar conta</a>
-              <a href="/login" className="bg-primary text-white font-bold py-2 px-7 rounded hover:bg-[#006BB1]cursor-pointer">Entrar</a>
+              <a href="/register" className="bg-white font-inter text-primary font-bold py-2 px-7 rounded border border-primary hover:bg-blue-50">Criar conta</a>
+              <a href="/login" className="bg-primary font-inter text-white font-bold py-2 px-7 rounded hover:bg-[#006BB1]">Entrar</a>
             </div>
           )}
         </div>

@@ -3,19 +3,14 @@ import Header from "../components/Header";
 
 export default function Home() {
   return (
-    <>
+    <div className="">
       <section
-        className="relative w-full bg-cover bg-center"
-        style={{"background-image": "url('/header-bg.png')",
-        "height": "650px"}}
+        className="relative w-full h-[30rem] bg-center bg-cover md:h-[45rem]"
+        style={{"background-image": "url('/header-bg.png')"}}
       >
-        <div className="absolute inset-0 bg-black opacity-30"></div>
         <div className="relative px-20 z-10 flex flex-col justify-between w-full h-full lg:text-start text-center text-white">
           <div className="my-auto">
-            <h2
-              className="text-4xl font-bold mb-16 md:text-5xl lg:text-7xl"
-              style={{"line-height": '1.3'}}
-            >
+            <h2 className="font-inter text-4xl font-bold mb-16 md:text-5xl lg:text-7xl/[1.2]">
               Criamos união em <br />
               momentos de necessidade
             </h2>
@@ -225,6 +220,6 @@ export default function Home() {
           />
         </div>
       </section>
-    </>
+    </div>
   );
 }
