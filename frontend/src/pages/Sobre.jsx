@@ -1,6 +1,6 @@
 import React from 'react';
-import { Swiper, SwiperSlide } from 'swiper/react';
-import { Pagination, Navigation } from 'swiper/modules';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faHandsHelping, faHeart, faPeopleCarry, faLightbulb } from "@fortawesome/free-solid-svg-icons"
 
 export default function Sobre() {
   return (
@@ -11,7 +11,7 @@ export default function Sobre() {
             SOBRE NÓS
           </h3>
 
-          <h2 className="text-4xl text-center font-bold mb-8">
+          <h2 className="text-4xl leading-[1.3] text-center font-bold mb-8">
             Como surgiu o Nexus?
           </h2>
 
@@ -56,69 +56,57 @@ export default function Sobre() {
             NOSSOS VALORES
           </h3>
 
-          <h2 className="text-4xl text-center font-bold mb-12">
+          <h2 className="text-4xl leading-[1.3] text-center font-bold mb-12">
             Uma grande equipe com um objetivo muito maior
           </h2>
 
-          <div className="flex flex-col items-center gap-10 md:flex-row">
-            <div className="flex flex-col w-[70%] md:w-1/3">
-                <h3 className="text-lg text-center md:text-start text-primary font-bold mb-2">
+          <div className="flex flex-col items-center gap-12 md:flex-row md:items-start">
+            <div className="flex flex-col w-[80%] md:w-1/2 items-center">
+                <FontAwesomeIcon icon={faHandsHelping} className="text-[#1FA4E4] text-3xl mb-6 p-4 bg-secondary rounded-md"/>
+
+                <h3 className="text-lg text-center text-black font-semibold mb-2">
                   Solidariedade
                 </h3>
 
-                <p className="text-textc text-center md:text-start">
+                <p className="text-md leading-[1.8] text-textc text-center">
                   No Nexus, acreditamos que a solidariedade é a base de uma sociedade mais justa e igualitária
                 </p>
             </div>
 
-            <div className="flex flex-col w-[70%] md:w-1/3">
-                <h3 className="text-lg text-center md:text-start text-primary font-bold mb-2">
-                  Esperança
-                </h3>
+            <div className="flex flex-col w-[80%] md:w-1/2 items-center">
+                <FontAwesomeIcon icon={faHeart} className="text-[#1FA4E4] text-3xl mb-6 p-4 bg-secondary rounded-md"/>
 
-                <p className="text-textc text-center md:text-start">
-                  Procuramos oferecer esperança aos que mais precisam, mostrando que é possível superar desafios
-                </p>
-            </div>
-
-            <div className="flex flex-col w-[70%] md:w-1/3">
-                <h3 className="text-lg text-center md:text-start text-primary font-bold mb-2">
+                <h3 className="text-lg text-center text-black font-semibold mb-2">
                   Empatia
                 </h3>
 
-                <p className="text-textc text-center md:text-start">
+                <p className="text-md leading-[1.8] text-textc text-center">
                   A empatia é a chave para entender as necessidades das pessoas afetadas por desastres
                 </p>
             </div>
           </div>
 
-          <div className="flex flex-col items-center gap-10 mt-10 md:flex-row ">
-            <div className="flex flex-col w-[70%] md:w-1/3">
-                <h3 className="text-lg text-center md:text-start text-primary font-bold mb-2">
-                  Resiliência
-                </h3>
+          <div className="flex flex-col items-center gap-12 mt-12 md:flex-row md:items-start">
+            <div className="flex flex-col w-[80%] md:w-1/2 items-center">
+                <FontAwesomeIcon icon={faPeopleCarry} className="text-[#1FA4E4] text-3xl mb-6 p-4 bg-secondary rounded-md"/>
 
-                <p className="text-textc text-center md:text-start">
-                  No Nexus, celebramos a força e a determinação das pessoas que enfrentam situações difíceis
-                </p>
-            </div>
-
-            <div className="flex flex-col w-[70%] md:w-1/3">
-                <h3 className="text-lg text-center md:text-start text-primary font-bold mb-2">
+                <h3 className="text-lg text-center text-black font-semibold mb-2">
                   Cooperação
                 </h3>
 
-                <p className="text-textc text-center md:text-start">
+                <p className="text-md leading-[1.8] text-textc text-center">
                   A cooperação é fundamental para alcançarmos resultados significativos
                 </p>
             </div>
 
-            <div className="flex flex-col w-[70%] md:w-1/3">
-                <h3 className="text-lg text-center md:text-start text-primary font-bold mb-2">
+            <div className="flex flex-col w-[80%] md:w-1/2 items-center">
+                <FontAwesomeIcon icon={faLightbulb} className="text-[#1FA4E4] text-3xl mb-6 p-4 bg-secondary rounded-md"/>
+                
+                <h3 className="text-lg text-center text-black font-semibold mb-2">
                   Inovação
                 </h3>
 
-                <p className="text-textc text-center md:text-start">
+                <p className="text-md leading-[1.8] text-textc text-center">
                   Buscamos por novas tecnologias para atender às necessidades das comunidades afetadas
                 </p>
             </div>
