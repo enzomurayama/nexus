@@ -5,7 +5,7 @@ import Header from "../components/Header";
 
 export default function Home() {
   return (
-    <div>
+    <div className="flex flex-col items-center">
       <section className="relative w-full h-[20rem] mb-8 bg-[url('/header-bg.png')] bg-center bg-cover lg:mb-16 md:h-[25rem] lg:h-[40rem]">
         <div className="flex flex-col justify-between w-full h-full px-10 lg:px-20">
           <div className="my-auto space-y-16">
@@ -35,7 +35,7 @@ export default function Home() {
             <div className="border-t-2 border-[#1FA4E4]/40 w-full ml-8"></div>
           </div>
 
-          <h2 className="text-4xl/[1.4] font-bold mt-8">
+          <h2 className="text-4xl/[1.3] font-bold mt-8">
             QUEREMOS SER A SUA ESPERANÇA
           </h2>
 
@@ -73,7 +73,9 @@ export default function Home() {
             <div className="border-t-2 border-[#1FA4E4]/40 w-full ml-8"/>
           </div>
 
-          <h2 className="text-4xl/[1.4] font-bold mt-8">PRECISO DE APOIO</h2>
+          <h2 className="text-4xl/[1.3] font-bold mt-8">
+            PRECISO DE APOIO
+          </h2>
 
           <p className="text-lg/[1.8] text-textc text-justify my-8 lg:w-[55%]">
             Se você é vítima de um desastre natural e precisa de ajuda, nós
@@ -128,7 +130,7 @@ export default function Home() {
             <div className="border-t-2 border-[#1FA4E4]/40 w-full ml-8"></div>
           </div>
 
-          <h2 className="text-4xl/[1.4] font-bold mt-8">
+          <h2 className="text-4xl/[1.3] font-bold mt-8">
             SEJA NOSSO PARCEIRO
           </h2>
 
