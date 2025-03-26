@@ -51,7 +51,7 @@ export default function Header() {
 
         <div className="hidden lg:flex lg:items-center lg:space-x-12">
           <a href="/" className="font-medium text-textc hover:text-primary">Início</a>
-          <a href="/sobre" className="font-medium text-textc hover:text-primary">Sobre</a>
+          <a href="/about" className="font-medium text-textc hover:text-primary">Sobre</a>
           <a href="/mural" className="font-medium text-textc hover:text-primary">Mural de pedidos</a>
           <a href="#" className="font-medium text-textc hover:text-primary">Mapa</a>
         </div>
@@ -80,7 +80,7 @@ export default function Header() {
         >
           <div className="flex flex-col space-y-6">
             <a href="/" className="font-medium text-textc hover:text-primary">Início</a>
-            <a href="/sobre" className="font-medium text-textc hover:text-primary">Sobre</a>
+            <a href="/about" className="font-medium text-textc hover:text-primary">Sobre</a>
             <a href="/mural" className="font-medium text-textc hover:text-primary">Mural de pedidos</a>
             <a href="#mapa" className="font-medium text-textc hover:text-primary">Mapa</a>
             {isLoggedIn ? (

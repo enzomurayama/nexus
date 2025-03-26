@@ -19,7 +19,7 @@ export default function Footer() {
             <h3 className="text-2xl text-white font-bold mb-5">Acesso rápido</h3>
             <ul className="grid grid-cols-[25%_25%_25%] gap-4">
               <li><a href="/" className="hover:text-[#FFF]">Home</a></li>
-              <li><a href="/sobre" className="hover:text-[#FFF]">Sobre</a></li>
+              <li><a href="/about" className="hover:text-[#FFF]">Sobre</a></li>
               <li><a href="/mural" className="hover:text-[#FFF]">Pedidos</a></li>
               <li><a href="#mapa" className="hover:text-[#FFF]">Mapa</a></li>
               <li><a href="#contato" className="hover:text-[#FFF]">Contato</a></li>

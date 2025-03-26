@@ -3,7 +3,7 @@ import Header from './components/Header'
 import Home from './pages/Home'
 import Footer from './components/Footer'
 import { Route, Routes } from 'react-router-dom'
-import Sobre from './pages/Sobre'
+import About from './pages/About'
 import MuralDePedidos from './pages/MuralDePedidos'
 import CriarPedido from './pages/CriarPedido'
 import Login from './pages/Login'
@@ -20,7 +20,7 @@ function App() {
             <main className="grow">
               <Routes>
                 <Route path="/" element={<Home />} />
-                <Route path="/sobre" element={<Sobre />} />
+                <Route path="/about" element={<About />} />
                 <Route path="/mural" element={<MuralDePedidos />} />
                 <Route element={<ProtectedRoute />}>
                   <Route path="/criar-pedido" element={<CriarPedido />} />
