@@ -11,6 +11,12 @@
     --breakpoint-xs: 25rem;
 }
 
+@layer base {
+    html {
+      font-family: 'Inter', sans-serif;
+    }
+}
+
 .swiper-wrapper{
     align-items: center;
 }

@@ -50,19 +50,19 @@ export default function Header() {
         </div>
 
         <div className="hidden lg:flex lg:items-center lg:space-x-12">
-          <a href="/" className="font-inter font-medium text-textc hover:text-primary">Início</a>
-          <a href="/sobre" className="font-inter font-medium text-textc hover:text-primary">Sobre</a>
-          <a href="/mural" className="font-inter font-medium text-textc hover:text-primary">Mural de pedidos</a>
-          <a href="#" className="font-inter font-medium text-textc hover:text-primary">Mapa</a>
+          <a href="/" className="font-medium text-textc hover:text-primary">Início</a>
+          <a href="/sobre" className="font-medium text-textc hover:text-primary">Sobre</a>
+          <a href="/mural" className="font-medium text-textc hover:text-primary">Mural de pedidos</a>
+          <a href="#" className="font-medium text-textc hover:text-primary">Mapa</a>
         </div>
 
         <div className="flex space-x-4 my-auto lg:block hidden">
           {isLoggedIn ? (
-            <a onClick={handleLogout} href="/login" className="bg-primary font-inter text-white font-bold py-2 px-7 rounded hover:bg-[#006BB1] transition duration-300">Sair</a>
+            <a onClick={handleLogout} href="/login" className="bg-primary text-white font-bold py-2 px-7 rounded hover:bg-[#006BB1] transition duration-300">Sair</a>
           ) : (
             <div className="flex gap-3">
-              <a href="/register" className="bg-white font-inter text-primary font-bold py-2 px-7 rounded border border-primary hover:bg-blue-50 transition duration-300">Criar conta</a>
-              <a href="/login" className="bg-primary font-inter text-white font-bold py-2 px-7 rounded hover:bg-[#006BB1] transition duration-300">Entrar</a>
+              <a href="/register" className="bg-white text-primary font-bold py-2 px-7 rounded border border-primary hover:bg-blue-50 transition duration-300">Criar conta</a>
+              <a href="/login" className="bg-primary text-white font-bold py-2 px-7 rounded hover:bg-[#006BB1] transition duration-300">Entrar</a>
             </div>
           )}
         </div>
@@ -79,14 +79,14 @@ export default function Header() {
           className={`bg-white w-full h-62 px-10 pb-8 ${isMenuOpen ? "translate-x-0" : "translate-x-full"}`}
         >
           <div className="flex flex-col space-y-6">
-            <a href="/" className="font-inter font-medium text-textc hover:text-primary">Início</a>
-            <a href="/sobre" className="font-inter font-medium text-textc hover:text-primary">Sobre</a>
-            <a href="/mural" className="font-inter font-medium text-textc hover:text-primary">Mural de pedidos</a>
-            <a href="#mapa" className="font-inter font-medium text-textc hover:text-primary">Mapa</a>
+            <a href="/" className="font-medium text-textc hover:text-primary">Início</a>
+            <a href="/sobre" className="font-medium text-textc hover:text-primary">Sobre</a>
+            <a href="/mural" className="font-medium text-textc hover:text-primary">Mural de pedidos</a>
+            <a href="#mapa" className="font-medium text-textc hover:text-primary">Mapa</a>
             {isLoggedIn ? (
-              <a onClick={handleLogout} href="/login" className="font-inter text-primary font-medium hover:text-[#0371a6]">Sair</a>
+              <a onClick={handleLogout} href="/login" className="text-primary font-medium hover:text-[#0371a6]">Sair</a>
             ) : (
-              <a href="/login" className="font-inter text-textc font-bold hover:text-primary">Entrar</a>
+              <a href="/login" className="text-textc font-bold hover:text-primary">Entrar</a>
             )}
           </div>
         </div>
