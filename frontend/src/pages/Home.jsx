@@ -6,6 +6,7 @@ import Header from "../components/Header";
 export default function Home() {
   return (
     <div className="flex flex-col items-center">
+      <Header/>
       <section className="relative w-full h-[20rem] mb-8 bg-[url('/header-bg.png')] bg-center bg-cover lg:mb-16 md:h-[25rem] lg:h-[40rem]">
         <div className="flex flex-col justify-between w-full h-full px-10 lg:px-20">
           <div className="my-auto space-y-16">
@@ -154,6 +155,7 @@ export default function Home() {
           />
         </div>
       </section>
+      <Footer/>
     </div>
   );
 }

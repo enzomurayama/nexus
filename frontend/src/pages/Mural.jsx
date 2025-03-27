@@ -1,12 +1,13 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
+import axios from 'axios';
+import api from '../api';
 import PedidoCard from '../components/PedidoCard';
 import Filtros from '../components/Filtros';
-import axios from 'axios';
-import { useState } from 'react';
-import api from '../api';
+import Header from "../components/Header";
+import Footer from "../components/Footer";
 
 
-const MuralDePedidos = () => {
+const Mural = () => {
   const [pedidos, setPedidos] = useState([]);
 
   useEffect(() => {
@@ -23,10 +24,11 @@ const MuralDePedidos = () => {
   }, []);
 
   return (
-    <div>
+    <div className="min-h-screen flex flex-col">
+      <Header/>
       <h2 className="text-3xl sm:text-4xl font-bold px-20 my-10">Pedidos abertos</h2>
       <Filtros />
-      <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-8 2xl:gap-16 mt-16 px-20 mb-16">
+      <div className="flex-grow grid grid-cols-1 mt-16 mb-16 gap-8 px-10 lg:px-20 lg:grid-cols-2 xl:grid-cols-3 2xl:gap-16">
         {pedidos.map((pedido, index) => (
           <PedidoCard
             key={index}
@@ -38,8 +40,9 @@ const MuralDePedidos = () => {
           />
         ))}
       </div>
+      <Footer/>
     </div>
   );
 };
 
-export default MuralDePedidos;
+export default Mural;

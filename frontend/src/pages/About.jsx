@@ -2,10 +2,13 @@ import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faHandsHelping, faHeart, faPeopleCarry, faLightbulb } from "@fortawesome/free-solid-svg-icons"
 import AccordionMenu from '../components/AccordionMenu';
+import Header from "../components/Header";
+import Footer from "../components/Footer";
 
 export default function About() {
   return (
     <div>
+      <Header/>
       <section className="flex flex-col items-center mt-16">
         <div className="flex flex-col items-center px-10 md:w-[80%] lg:px-20 xl:w-[60%]">
           <h3 className="text-md tracking-wider text-primary mb-6">
@@ -130,6 +133,7 @@ export default function About() {
           </div>
         </div>
       </section>
+      <Footer/>
     </div>
   );
 }
