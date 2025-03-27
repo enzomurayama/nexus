@@ -1,6 +1,7 @@
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faHandsHelping, faHeart, faPeopleCarry, faLightbulb } from "@fortawesome/free-solid-svg-icons"
+import AccordionMenu from '../components/AccordionMenu';
 
 export default function About() {
   return (
@@ -114,7 +115,7 @@ export default function About() {
         </div>
       </section>
 
-      <section className="flex flex-col items-center mt-24 mb-32">
+      <section className="flex flex-col items-center mt-24 mb-16">
         <div className="flex flex-col items-center px-10 md:w-[80%] lg:px-20 xl:w-[60%]">
           <h3 className="text-md tracking-wider text-primary mb-6">
             PERGUNTAS FREQUENTES
@@ -124,8 +125,8 @@ export default function About() {
             Alguma dúvida até aqui?
           </h2>
 
-          <div className="">
-
+          <div className="w-full">
+            <AccordionMenu/>
           </div>
         </div>
       </section>
