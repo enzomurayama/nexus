@@ -26,14 +26,8 @@ export default function Login() {
   };
 
   return (
-    <div className="flex min-h-screen">
-      <div className="w-[60%] px-16 py-12 flex-col justify-end bg-[url('/login-bg.png')] bg-cover bg-center hidden lg:flex">
-        <h2 className="2xl:w-[75%] text-7xl/[1.2] text-white font-bold mb-2">
-          Impactando vidas ao redor do mundo
-        </h2>
-      </div>
-
-      <div className="grow px-2 flex items-center justify-center">
+    <div className="min-h-screen flex items-center justify-center sm:bg-[url('/login-bg.png')] bg-cover bg-center xl:pr-40 xl:justify-end ">
+      <div className="w-full h-[570px] px-2 flex items-center justify-center bg-white rounded-xl sm:w-[510px]">
         <div className="w-full max-w-md p-8">
           <h2 className="text-3xl font-bold mb-2">
             Entrar
@@ -43,7 +37,7 @@ export default function Login() {
 
           <form onSubmit={handleSubmit}>
             <div className="mb-6">
-              <label htmlFor="login" className="block text-gray-700 font-medium mb-2">Login</label>
+              <label htmlFor="login" className="block text-gray-700 font-medium mb-2">Email</label>
               <input
                 type="text"
                 id="login"
@@ -57,14 +51,14 @@ export default function Login() {
             <div className="mb-2">
               <label htmlFor="senha" className="block text-gray-700 font-medium mb-2">Senha</label>
 
-              <div className="w-full flex justify-between items-center pr-3 gap-2 text-textc border border-[#dcdcdc] rounded">
+              <div className="w-full flex justify-between items-center pr-4 gap-2 border border-[#dcdcdc] rounded">
                 <input
                   type={showPassword ? "text" : "password"}
                   id="senha"
                   value={password}
                   onChange={(e) => setPassword(e.target.value)}
-                  placeholder="Digite sua senha"
-                  className="grow p-3 focus:outline-none"
+                  placeholder="Insira sua senha"
+                  className="grow max-w-[90%] p-3 text-textc focus:outline-none"
                 />
 
                 <button onClick={() => setShowPassword(!showPassword)}>
@@ -85,12 +79,12 @@ export default function Login() {
 
             <button
               type="submit"
-              className="w-full rounded-lg bg-primary text-white font-bold py-3 transition duration-300 hover:bg-[#006BB1]"
+              className="w-full rounded-lg bg-primary text-white font-bold py-3.5 transition duration-300 hover:bg-[#006BB1]"
             >
               Entrar
             </button>
 
-            <div className="flex text-center mt-4 justify-center gap-1">
+            <div className="flex text-center mt-6 justify-center gap-1">
               <p className="text-textc text-sm">
                 Não possui uma conta?
               </p>
