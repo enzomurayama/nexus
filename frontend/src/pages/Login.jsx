@@ -3,7 +3,7 @@ import { FiEye, FiEyeOff } from 'react-icons/fi';
 import axios from 'axios';
 
 export default function Login() {
-  const [login, setLogin] = useState('');
+  const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [showPassword, setShowPassword] = useState(false);
   const [error, setError] = useState('');
@@ -12,7 +12,7 @@ export default function Login() {
     e.preventDefault();
     try {
       const response = await axios.post('http://localhost:8000/token', {
-        username: login,
+        username: email,
         password: password,
       }, {
         headers: { 'Content-Type': 'application/x-www-form-urlencoded' }
@@ -26,8 +26,8 @@ export default function Login() {
   };
 
   return (
-    <div className="min-h-screen flex items-center justify-center sm:bg-[url('/login-bg.png')] bg-cover bg-center xl:pr-40 xl:justify-end ">
-      <div className="w-full h-[570px] px-2 flex items-center justify-center bg-white rounded-xl sm:w-[510px]">
+    <div className="min-h-screen flex items-center justify-center sm:bg-[url('/login-bg.png')] bg-cover bg-center xl:pr-40 xl:justify-end">
+      <div className="w-full px-2 py-8 flex items-center justify-center bg-white rounded-xl sm:w-[510px]">
         <div className="w-full max-w-md p-8">
           <h2 className="text-3xl font-bold mb-2">
             Entrar
@@ -37,31 +37,31 @@ export default function Login() {
 
           <form onSubmit={handleSubmit}>
             <div className="mb-6">
-              <label htmlFor="login" className="block text-gray-700 font-medium mb-2">Email</label>
+              <label htmlFor="email" className="block text-gray-700 font-medium mb-2">Email</label>
               <input
-                type="text"
-                id="login"
-                value={login}
-                onChange={(e) => setLogin(e.target.value)}
+                type="email"
+                id="email"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
                 placeholder="email@gmail.com"
                 className="w-full p-3 text-textc border border-[#dcdcdc] rounded focus:outline-none"
               />
             </div>
 
             <div className="mb-2">
-              <label htmlFor="senha" className="block text-gray-700 font-medium mb-2">Senha</label>
+              <label htmlFor="password" className="block text-gray-700 font-medium mb-2">Senha</label>
 
               <div className="w-full flex justify-between items-center pr-4 gap-2 border border-[#dcdcdc] rounded">
                 <input
                   type={showPassword ? "text" : "password"}
-                  id="senha"
+                  id="password"
                   value={password}
                   onChange={(e) => setPassword(e.target.value)}
                   placeholder="Insira sua senha"
                   className="grow max-w-[90%] p-3 text-textc focus:outline-none"
                 />
 
-                <button onClick={() => setShowPassword(!showPassword)}>
+                <button type="button" onClick={() => setShowPassword(!showPassword)}>
                   {showPassword ? (
                     <FiEye className="text-neutral-400 transition duration-300 ease-in-out" size={16} />
                   ) : (
