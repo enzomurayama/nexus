@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { FiEye, FiEyeOff } from 'react-icons/fi';
+import { Link } from 'react-router-dom';
 import axios from 'axios';
 
 export default function Login() {
@@ -89,9 +90,9 @@ export default function Login() {
                 Não possui uma conta?
               </p>
 
-              <a href="/register" className="text-textc text-sm underline">
+              <Link replace to="/register" className="text-textc text-sm underline">
                 Criar agora
-              </a>
+              </Link>
             </div>
           </form>
         </div>

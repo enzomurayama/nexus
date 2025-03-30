@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import axios from "axios";
 import { z } from "zod";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
 import { ToastContainer, toast } from "react-toastify";
 import { FiEye, FiEyeOff } from 'react-icons/fi';
 import "react-toastify/dist/ReactToastify.css";
@@ -229,9 +229,9 @@ export default function Register() {
             Já possui uma conta?
           </p>
 
-          <a href="/login" className="text-textc text-sm underline">
+          <Link replace to="/login" className="text-textc text-sm underline">
             Entrar agora
-          </a>
+          </Link>
         </div>
 
         {/* Modal */}
