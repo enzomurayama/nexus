@@ -1,8 +1,7 @@
 import React from "react";
-
 import { Link } from "react-router-dom";
 
-const Filtros = () => {
+export default function Filter() {
   return (
     <div className="filters flex md:flex-row flex-col md:justify-between px-20 max-sm:flex-wrap gap-3">
       <div className="hidden lg:flex flex gap-4 max-sm:flex-wrap">
@@ -61,5 +60,3 @@ const Filtros = () => {
     </div>
   );
 };
-
-export default Filtros;

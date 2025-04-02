@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import api from '../api';
 import PedidoCard from '../components/PedidoCard';
-import Filtros from '../components/Filtros';
+import Filter from '../components/Filter';
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 
@@ -27,7 +27,7 @@ const Mural = () => {
     <div className="min-h-screen flex flex-col">
       <Header/>
       <h2 className="text-3xl sm:text-4xl font-bold mt-16 mb-8 px-10 lg:px-20">Pedidos abertos</h2>
-      <Filtros />
+      <Filter />
       <div className="flex-grow grid grid-cols-1 mt-16 mb-16 gap-8 px-10 lg:px-20 lg:grid-cols-2 xl:grid-cols-3 2xl:gap-16">
         {pedidos.map((pedido, index) => (
           <PedidoCard
