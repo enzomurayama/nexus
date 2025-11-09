@@ -23,8 +23,3 @@ O Nexus tem como principal objetivo fornecer uma plataforma para conectar vítim
 - **Atualizações em Tempo Real**: Informações atualizadas sobre condições de segurança, clima e progresso na recuperação.
 
 <br>
-
-## Tecnologias Utilizadas
-- **HTML5**: Estrutura básica do sistema.
-- **CSS3**: Estilização e design responsivo.
-- **React**: Biblioteca JavaScript para desenvolvimento da interface de usuário.
