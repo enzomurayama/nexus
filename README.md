@@ -18,12 +18,12 @@ O Nexus tem como principal objetivo fornecer uma plataforma para conectar vítim
 ## Funcionalidades Principais
 **🗺️ Mapeamento de Áreas Afetadas**: Exibição de áreas impactadas por desastres naturais em tempo real.
 
-**📝 Cadastro de Usuários**: Permite que vítimas, voluntários e organizações se cadastrem para acesso e oferta de ajuda.
+**📝 Cadastro de Usuários**: Permite que vítimas, voluntários e organizações se cadastrem.
 
 **🏥 Central de Recursos**: Local para organizar e divulgar suprimentos disponíveis, abrigos e serviços.
 
-**💬 Comunicação e Suporte**: Ferramentas para facilitar a comunicação entre usuários e prestadores de assistência.
+**💬 Comunicação e Suporte**: Ferramentas para comunicação entre usuários e prestadores de assistência.
 
-**🔔 Atualizações em Tempo Real**: Informações atualizadas sobre condições de segurança, clima e progresso na recuperação.
+**🔔 Atualizações em Tempo Real**: Informações atualizadas sobre condições de segurança, clima etc.
 
 <br>
